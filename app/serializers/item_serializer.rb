@@ -1,5 +1,6 @@
 class ItemSerializer < ActiveModel::Serializer
-  attributes :id, :name, :price
-  belongs_to :item_list
+  attributes :id, :product_name, :price, :photo_url 
+  has_many :list_items
+  has_many :lists, through: :list_items 
 
 end
