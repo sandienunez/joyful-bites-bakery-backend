@@ -1,5 +1,5 @@
 class ListSerializer < ActiveModel::Serializer
-    attributes :id, :client_name, :date_order_made 
+    attributes :id, :client_name, :date_order_made, :total_amount
     has_many :list_items
     has_many :items, through: :list_items 
   

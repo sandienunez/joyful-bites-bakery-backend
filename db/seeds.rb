@@ -7,4 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 item = Item.create(product_name: 'Chocolate Chip Cookie', price: 10, photo_url: 'https://ibb.co/4mt8jwM' ) 
-# binding.pry 
+list = List.create(client_name: 'Sand', date_order_made: 'Friday', total_amount: 12)
+binding.pry 

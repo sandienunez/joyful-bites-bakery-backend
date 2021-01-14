@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2021_01_08_204639) do
 
   create_table "list_items", force: :cascade do |t|
     t.string "quantity"
-    t.integer "total_amount"
     t.integer "item_id"
     t.integer "list_id"
     t.datetime "created_at", precision: 6, null: false
@@ -32,6 +31,7 @@ ActiveRecord::Schema.define(version: 2021_01_08_204639) do
   create_table "lists", force: :cascade do |t|
     t.string "client_name"
     t.string "date_order_made"
+    t.integer "total_amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -36,6 +36,6 @@ class ListItemsController < ApplicationController
   private
 
     def list_item_params
-      params.require(:list_item).permit(:quantity, :total_amount, :item_id, :list_id)
+      params.require(:list_item).permit(:quantity, :item_id, :list_id)
     end
 end
