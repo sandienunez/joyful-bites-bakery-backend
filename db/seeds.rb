@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-item = Item.create(product_name: 'Almond Coconut', price: '3.25', photo_url: 'https://ibb.co/4mt8jwM' ) 
-item_two = Item.create(product_name: 'Chocolate Chip', price: '3.50', photo_url: 'https://ibb.co/4mt8jwM' ) 
-item_three = Item.create(product_name: 'Blueberry Lemon', price: '3.00', photo_url: 'https://ibb.co/4mt8jwM' ) 
+item = Item.create(product_name: 'Almond Coconut') 
+item_two = Item.create(product_name: 'Chocolate Chip' ) 
+item_three = Item.create(product_name: 'Blueberry Lemon' ) 
 
 list_item = ListItem.create(quantity: '3')
-list = List.create(client_name: 'Sand', date_order_made: '1/14/21', total_amount: 12)
+list = List.create(client_name: 'Sand', date_order_made: '1/14/21')
 
 # binding.pry 
