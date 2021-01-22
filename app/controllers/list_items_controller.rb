@@ -2,6 +2,7 @@ class ListItemsController < ApplicationController
     #Get Request  /list_items
     def index
         @list_items = ListItem.all 
+        # binding.pry 
         render json: @list_items
     end
 

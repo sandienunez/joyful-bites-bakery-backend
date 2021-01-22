@@ -30,8 +30,8 @@ class ListsController < ApplicationController
         else 
             render json: @list.errors, status: :unprocessable_entity
         end
-        @item.save 
-        @list_item.save
+        # @item.save 
+        # @list_item.save
         # binding.pry
     end
 
