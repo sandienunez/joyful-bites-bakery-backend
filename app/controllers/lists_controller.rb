@@ -5,25 +5,29 @@ class ListsController < ApplicationController
     def index
         # binding.pry
         @lists = List.all.reverse 
-        # @item = Item.find(params[:item_id])
-        # @lists = @item.lists.all
         render json: @lists
     end
 
+    #GET REQUEST /lists/1
+    def show 
+        @list = List.find(params[:id])
+        render json: @list 
+    end
 
 #POST REQUEST /lists
     def create 
         #make list item (set quantity based on info in params)
-        #tell list item_list it belongs to and item it belongs to 
+        #tell list item_list it belongs_to and item it belongs_to 
         @list = List.new(list_params)
         @item = Item.find_by(product_name: params[:product_name])
         @list_item = ListItem.new(quantity: params[:quantity])
-        # @list_item.quantity
-        @list_item.list=@list 
-        @list_item.item=@item 
-        # @list_item.save
-        # binding.pry
-        # item.list_item
+        @list_item.list=@list  # belongs to
+        @list.list_items << @list_item # has many
+        @list_item.item=@item #belongs to
+        @item.list_items << @list_item #has many 
+
+# << concat Adds one or more records to collection by setting foreign keys to association's primary key
+ #Since << flattens its argument list and inserts each record, push and concat behave identically. Returns self so several appends may be chained together.
 
         if @list.save 
             render json: @list, status: :created, location: @list
@@ -34,14 +38,6 @@ class ListsController < ApplicationController
         # @list_item.save
         # binding.pry
     end
-
-#GET REQUEST /lists/1
-    def show 
-        @list = List.find(params[:id])
-        render json: @list 
-    end
-
-    
 
 # PATCH/PUT request  /lists/1
     def update
@@ -65,6 +61,8 @@ class ListsController < ApplicationController
 
   def find_list
     @list = List.find(params[:id])
+    # @list_item = ListItem.find(params[:id])
+    # @item = Item.find(params[:id])
 end
 
     def list_params
