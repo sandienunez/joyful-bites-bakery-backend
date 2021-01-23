@@ -16,27 +16,19 @@ class ListsController < ApplicationController
 
 #POST REQUEST /lists
     def create 
-        #make list item (set quantity based on info in params)
-        #tell list item_list it belongs_to and item it belongs_to 
-        @list = List.new(list_params)
+        @list = List.new(list_params)        
         @item = Item.find_by(product_name: params[:product_name])
         @list_item = ListItem.new(quantity: params[:quantity])
         @list_item.list=@list  # belongs to
         @list.list_items << @list_item # has many
         @list_item.item=@item #belongs to
         @item.list_items << @list_item #has many 
-
 # << concat Adds one or more records to collection by setting foreign keys to association's primary key
- #Since << flattens its argument list and inserts each record, push and concat behave identically. Returns self so several appends may be chained together.
-
         if @list.save 
             render json: @list, status: :created, location: @list
         else 
             render json: @list.errors, status: :unprocessable_entity
         end
-        # @item.save 
-        # @list_item.save
-        # binding.pry
     end
 
 # PATCH/PUT request  /lists/1
