@@ -6,7 +6,7 @@ Welcome to the Joyful Bites Bakery App! This is my final project for the Flatiro
 
 ## Frontend
 
-The frontend for theJoyful Bites Bakery App can be found [here](https://github.com/sandienunez/joyful-bites-bakery-backend).
+The frontend for the Joyful Bites Bakery App can be found [here](https://github.com/sandienunez/joyful-bites-bakery-backend).
 
 ## Inspiration 
 
