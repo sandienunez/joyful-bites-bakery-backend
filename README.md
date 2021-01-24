@@ -32,7 +32,7 @@ Follow these steps to get the backend up and running:
 
 To start the Rails server for the Joyful Bites Bakery app, run `rails s`. Then, you can do any of the following:
 
-* Navigate to `http://localhost:3000/lists` to view the serialized JSON for all of your saved beaches.
+* Navigate to `http://localhost:3000/lists` to view the serialized JSON for all of your saved orders.
   * If you do this, I recommend installing the [JSON Viewer Chrome extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=en-US) to view your data in an easy-to-read format.
 * Navigate to `http://localhost:3000/rails/info/routes` to see this project's available routes (or run `rails routes` in your terminal).
 * Exit the server by hitting `Ctrl-C` or `Cmd-C` in your terminal.
