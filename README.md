@@ -6,7 +6,7 @@ Welcome to the Joyful Bites Bakery App! This is my final project for the Flatiro
 
 ## Frontend
 
-The frontend for the Beach Journal can be found [here](https://github.com/sandienunez/joyful-bites-bakery-backend).
+The frontend for theJoyful Bites Bakery App can be found [here](https://github.com/sandienunez/joyful-bites-bakery-backend).
 
 ## Inspiration 
 
@@ -30,7 +30,7 @@ Follow these steps to get the backend up and running:
 
 ## Usage
 
-To start the Rails server for the Beach Journal, run `rails s`. Then, you can do any of the following:
+To start the Rails server for the Joyful Bites Bakery app, run `rails s`. Then, you can do any of the following:
 
 * Navigate to `http://localhost:3000/lists` to view the serialized JSON for all of your saved beaches.
   * If you do this, I recommend installing the [JSON Viewer Chrome extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=en-US) to view your data in an easy-to-read format.
