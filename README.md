@@ -26,7 +26,7 @@ Follow these steps to get the backend up and running:
 1. Fork and clone this repository onto your own computer.
 2. Run `bundle install` to install the Ruby gems for this app.
 3. Run `rails db:migrate` to create the database.
-4. (Optionally), run `rails db:seed` to give your database some default data.
+
 
 ## Usage
 
