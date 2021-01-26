@@ -40,14 +40,12 @@
 # @list_item.item=Item.create!(product_name: 'Almond Coconut') 
 # @item.list_items.create << @list_item 
 
-list = List.create!({
-   client_name: 'Sandie', date_order_made: '1/14/21'})
-@list_item.list = List.create!({
-    client_name: 'Sandie', date_order_made: '1/14/21'})
-@list.list_items <<  ListItem.create!(quantity: '4')
-@list_item.item=Item.create!(product_name: 'Almond Coconut') 
-list_item = ListItem.create!(quantity: '4')
-@list_item = @items
+# list = List.create!({
+#    client_name: 'Sandie', date_order_made: '1/14/21'})
+# @list.list_items <<  ListItem.create!(quantity: '4')
+# @list_item.item=Item.create!(product_name: 'Almond Coconut') 
+# list_item = ListItem.create!(quantity: '4')
+# @list_item = @items
 # list_item.item = Item.create(product_name: 'Almond Coconut')
 # # list.list_items = ListItem.create(quantity: '4')
 
@@ -57,3 +55,4 @@ list_item = ListItem.create!(quantity: '4')
     client_name: 'Sand', date_order_made: '1/14/21'})
 @item = Item.create!(product_name: 'Almond Coconut') 
 @list_item = ListItem.create!(quantity: '4')
+@list.list_items << item 
