@@ -51,8 +51,13 @@
 
 # # @item = @list_items
 
-@list = List.create!({
+@list = List.create({
     client_name: 'Sand', date_order_made: '1/14/21'})
-@item = Item.create!(product_name: 'Almond Coconut') 
-@list_item = ListItem.create!(quantity: '4')
-@list.list_items << item 
+# @item = Item.create(product_name: 'Almond Coconut') 
+# @list_item = ListItem.new(quantity: '4')
+# @list_item.save 
+@list.items.create(product_name: "Chocolate Chip")
+@list.list_items
+@list.list_items.create(quantity: "3") 
+
+
