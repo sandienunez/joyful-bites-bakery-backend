@@ -6,58 +6,26 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# item = Item.create(product_name: 'Almond Coconut') 
-# item_two = Item.create(product_name: 'Chocolate Chip' ) 
-# item_three = Item.create(product_name: 'Blueberry Lemon' ) 
+# @list = List.create({client_name: 'Kay', date_order_made: '1/20/21'})
+# @list.save 
+@list = List.find_by({client_name: 'Joseph', date_order_made: "1/30/21"})
 
-# list_item.list = List.create(client_name: 'Sand', date_order_made: '1/14/21')
-# list.list_items << ListItem.create(quantity: '3') # has many
-# list_item.item = Item.create(product_name: 'Almond Coconut')  #belongs to
-# # item.list_items << ListItem.create(quantity: '3')#has many 
+# @list_item = ListItem.create(quantity: "1", item_id: 1)
+@list_item = ListItem.find_by(quantity: "6", item_id: 1, list_id: 125)
 
-  
-#tell list item about the list, tell list about the list item
-#tell list item about the item and tell item about the list_item 
-# list = List.create!(client_name: 'Sand', date_order_made: '1/14/21')
+# @list = List.create({client_name: 'Jesus', date_order_made: "1/30/21"})
+# @list_item = ListItem.find_by(quantity: "3", item_id: 2, list_id: 126)
+# @list.list_items.where(quantity: "1", item_id: 1, list_id: 121).first_or_create
 
-# item = Item.create!(product_name: 'Almond Coconut') 
-# list_item = ListItem.create!(quantity: '4')
-
-# list_item.list=list  
-# list.list_items << list_item # has many
-# list_item.item=item #belongs to
-# item.list_items << list_item #has many 
-
-# list.list_items << ListItem.create(quantity: '4') 
-# list_item.item=item
-
-
-# @list = List.create!({
-#     client_name: 'Sandie', date_order_made: '1/14/21'})
-# @list_item = ListItem.create!(quantity: '4')
-# @list_item.list=@list 
-# @list.list_items << @list_item 
-# @list_item.item=Item.create!(product_name: 'Almond Coconut') 
-# @item.list_items.create << @list_item 
-
-# list = List.create!({
-#    client_name: 'Sandie', date_order_made: '1/14/21'})
-# @list.list_items <<  ListItem.create!(quantity: '4')
-# @list_item.item=Item.create!(product_name: 'Almond Coconut') 
-# list_item = ListItem.create!(quantity: '4')
-# @list_item = @items
-# list_item.item = Item.create(product_name: 'Almond Coconut')
-# # list.list_items = ListItem.create(quantity: '4')
-
-# # @item = @list_items
-
-@list = List.create({
-    client_name: 'Sand', date_order_made: '1/14/21'})
-# @item = Item.create(product_name: 'Almond Coconut') 
-# @list_item = ListItem.new(quantity: '4')
 # @list_item.save 
-@list.items.create(product_name: "Chocolate Chip")
-@list.list_items
-@list.list_items.create(quantity: "3") 
+# @list.list_items.create(quantity: "1", item_id: 1, list_id: 112)
+# @list.list_items.where(quantity: "1", item_id: 1, list_id: 113).first_or_create
+# @item = Item.create(product_name: "Chocolate Chip")
+# @list.items.create(product_name: "Chocolate Chip")
+# @list_item.save 
+# @list.items.find_by(product_name: "Chocolate Chip")
+
+
+
 
 
